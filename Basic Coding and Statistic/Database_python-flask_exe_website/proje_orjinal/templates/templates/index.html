@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Please rate your service</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="../static/tree.png" alt="Lexus" class="logo" />
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
+      <form action="/submit" method="POST">
+        
+        <div class="form-group">
+          <h3>Latitude Value</h3>
+          <input
+            type="text"
+            name="Latitude"
+            placeholder="Latitude"
+          />
+        </div>
+
+        <div class="form-group">
+          <h3>Longtitude Value</h3>
+          <input
+            type="text"
+            name="Longtitude"
+            placeholder="Longtitude"
+          />
+        </div>
+
+        <div class="form-group">
+          <h3>Your Name</h3>
+          <input
+            type="text"
+            name="name"
+            placeholder="name"
+          />
+        </div>
+
+        <div class="form-group">
+          <h3>height Value</h3>
+          <input
+            type="text"
+            name="height"
+            placeholder="height"
+          />
+        </div>
+
+
+        
+
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>
